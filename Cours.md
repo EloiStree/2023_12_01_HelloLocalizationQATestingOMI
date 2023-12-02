@@ -30,7 +30,12 @@ Bonjour à vous :)
 
 ## 1: Avec python fait prendre une photo d'écran via ADB
 
-## 2: Avec python lancer et stop l'enregistrement OBS
+## 2.A: Avec python lancer et stop l'enregistrement OBS
+
+## 2.B: Avec python prener un screenshot via OBS
+
+## 2.B: Avec python lancer et stop l'enregistrement Audio d'OBS
+
 
 ## 3: Avec python lancer et stop l'enregistrement audio d'un application
 
