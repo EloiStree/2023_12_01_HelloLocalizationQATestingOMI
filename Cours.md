@@ -16,6 +16,8 @@ Bonjour à vous :)
 [Download](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/3)
 
 ## 4.B: Télécharger Audacity pour enregistrer le son du SCRCPY ou d'un micro 
+[Download](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/9) 
+[Download Alternative](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/10)  
 
 (Note voir micro Bluetooth et micro qui écoute deux entrées sortie du Quest3 et voix)
 
