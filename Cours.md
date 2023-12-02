@@ -4,12 +4,16 @@ Bonjour à vous :)
 # Apprendre
 
 ## 1: Télécharger ADB et prendre une photo de l'écran
+[Download](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/2)
 
 ## 2: Télécharger SCRCPY et lancer une vidéo
+[Download](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/4)
 
 ## 3: Télécharger OBS et enregistrer l'image de SCRCPY
+[Download](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/8)
 
 ## 4: Télécharger FFMPEG et démarrer/stopper un enregistrement audio d'un app
+[Download](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/3)
 
 ## 4.B: Télécharger Audacity pour enregistrer le son du SCRCPY ou d'un micro 
 
