@@ -1,0 +1,10 @@
+/ADB/*
+/FFMPEG/*
+/SCRCPY/*
+
+/ADB/ReadMe.md
+/FFMPEG/ReadMe.md
+/SCRCPY/ReadMe.md
+!/ABD/Source.url
+!/FFMPEG/Source.url
+!/SCRCPY/Source.url
