@@ -18,15 +18,21 @@ Bonjour à vous :)
 
 # Developer
 
-# 0: Créér un server client UDP en Python 
+## 0: Créér un server client UDP en Python 
 
-# 0.B: Utiliser un script Unity 3D pour parler au server Python 
+## 0.B: Utiliser un script Unity 3D pour parler au server Python 
 
-# 1: Avec python fait prendre une photo d'écran via ADB
+## 1: Avec python fait prendre une photo d'écran via ADB
 
-# 2: Avec python lancer et stop l'enregistrement OBS
+## 2: Avec python lancer et stop l'enregistrement OBS
 
-# 3: Avec python lancer et stop l'enregistrement audio d'un application
+## 3: Avec python lancer et stop l'enregistrement audio d'un application
+
+
+
+# Bonus 
+
+#c 1 : Utiliser SCRCPY avec votre téléphone comme Webcam
 
 
 
