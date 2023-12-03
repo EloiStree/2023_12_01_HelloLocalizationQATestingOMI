@@ -1,76 +1,65 @@
-Salut à tous.
+# Salut à tous
 
-En tant que testeur vous allez devoir écrire des rapports.
-Mais vous allez aussi devoir enregistrer: des vidéos, des captures d'écran et du son.
+En tant que testeur, vous allez devoir rédiger des rapports, mais aussi enregistrer des vidéos, des captures d'écran et du son. Il existe de nombreuses façons de le faire. Pour cet atelier, je vais vous montrer une méthode.
 
-Il y a de nombreuses façon de faire.
-Pour cette atelier je vais vous montrer une façon de faire.
+## Étape par étape
 
-Durant cette atelier je vous ai apporté des casques de réalité virtuelle tournant sur Android.
+Allons-y étape par étape. Il y a beaucoup d'installations à effectuer et de travail à se familiariser.
 
+### OBS : Open Broadcast Software
 
-
-## Step by step
-Allons y étape par étape, il y a beaucoup à installer et de travail à se familiarizer.
-
-### OBS: Open Broadcast Software
- 
 [Download OBS et OBS Portable](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/8)
 
-OBS est un outil qui va vous permettre de faire de l'enregistrement vidéo. 
-C'est outil est parfait et Open Source. 
+OBS est un outil qui vous permettra d'enregistrer des vidéos. Cet outil est parfait et Open Source.
 
-
-
-Si vous enregistré la video, n'oublier pas de choisir un emplacement adhéquoi:
+Si vous enregistrez la vidéo, n'oubliez pas de choisir un emplacement approprié :
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/fe8316ce-0b57-4a9b-9ca9-b23c73847885)
 
-https://www.youtube.com/results?search_query=commencer+sur+obs
+[Guide vidéo pour débuter sur OBS](https://www.youtube.com/results?search_query=commencer+sur+obs)
 
 
 #### Shortcut
 
-Comme nous notre but c'est de créé des outils qui permet de se facilité la vie.
-On va aller définir des macros dans OBS et utiliser c'est macro depuis python pour lancer l'enregistrement.
+Comme notre but est de créer des outils qui permettent de se faciliter la vie, nous allons définir des macros dans OBS et utiliser ces macros depuis Python pour lancer l'enregistrement.
+
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/22915316-42fb-46fc-bfbd-f555f6722a91)
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/5dae7ac3-0645-4cab-b0d1-c961fe78cc77)
 
-Shortcut, Example: 
-CTRL+Shit+ALT+ Arrow Left = Start recording
-CTRL+Shit+ALT+ Arrow Right = Stop recording
-CTRL+Shit+ALT+ Arrow Up = Screenshot
+Shortcut, Example:
+- CTRL+Shift+ALT+ Arrow Left = Start recording
+- CTRL+Shift+ALT+ Arrow Right = Stop recording
+- CTRL+Shift+ALT+ Arrow Up = Screenshot
 
 
 #### Websocket
 
-C'est bien beau de hacker les touches pour lancer un enregistrement... Mais il y aurais pas plus direct ? Un API ?
-Depuis OBS 28, il y a la possibilité de lancer un Websocket pour controller OBS :) !!!
+C'est bien beau de hacker les touches pour lancer un enregistrement... Mais n'y aurait-il pas quelque chose de plus direct ? Une API ?
+Depuis OBS 28, il est possible de lancer un Websocket pour contrôler OBS :) !!!
 
-Cela permet de prendre le control de ce que l'on veut afficher et de changer à la volé l'outil par le réseaux.
-Info: https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/21
-Par example depuis [Streamer.bot](https://streamer.bot) ou depuis son navigateur web: [http://obs-web.niek.tv](http://obs-web.niek.tv)  
-Pour les plus guerriers d'entre vous:  
-https://websocketking.com  
+Cela permet de prendre le contrôle de ce que l'on veut afficher et de changer à la volée l'outil par le réseau.
+Info: [Lien vers l'issue](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/21)
+Par exemple, depuis [Streamer.bot](https://streamer.bot) ou depuis son navigateur web: [http://obs-web.niek.tv](http://obs-web.niek.tv)  
+Pour les plus audacieux d'entre vous:  
+[https://websocketking.com](https://websocketking.com)
 
-Et comme on a fait du python... Vous devinez pourquoi je vous en parle ;) 
-https://github.com/Elektordi/obs-websocket-py
+Et comme nous avons fait du Python... Vous devinez pourquoi je vous en parle ;) 
+[obs-websocket-py sur GitHub](https://github.com/Elektordi/obs-websocket-py)
 
-
-Vous pouvez le paramettrer en lancant OBS:  
+Vous pouvez le paramétrer en lançant OBS:  
 `D:\OBS Video>OBSPortable.exe --portable --websocket_port 4545 --websocket_password HelloWorld --websocket_debug --websocket_ipv4_only`  
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/57793bff-94c0-491e-9d92-80ec955a7c6f)
 
 
-### SCRCPY: Screen copy ( & ADB )
+### SCRCPY: Screen copy (& ADB)
+
 Nous allons un peu explorer comment enregistrer votre écran de téléphone et chipoter avec.
 
 #### Mode développeur
-Avant de pouvoir "jouer" avec son téléphone, il faut lui permettre d'être débugger par USB et optionnellement d'installer de source inconnue. Pour ça il faut passer votre téléphone en mode développeur.
-L'idée reste la même mais est différent sur tout les téléphones android:
-https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/30
+
+Avant de pouvoir "jouer" avec son téléphone, il faut lui permettre d'être débuggé par USB et éventuellement d'installer depuis une source inconnue. Pour cela, il faut passer votre téléphone en mode développeur.
+L'idée reste la même mais est différente sur tous les téléphones Android:
+[Guide détaillé](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/30)
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/2933e161-1058-4b6f-bd67-8186540faee5)![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/0c94d4d5-495d-43e3-9910-1f7e46271911)
-
-
 
 #### SCRCPY
 Pour pouvoir enregistré ce qui se passe sur votre téléphone Android ou sur votre casque de réalité virtuelle Android.
@@ -88,6 +77,7 @@ Il permet de communiquer avec votre téléphone.
 
 Pour utiliser ADB, vous allez utiliser un interface d'un développeur ou utiliser de command via la console sur window.
 
+
 ```
 adb devices -l
 adb reboot
@@ -97,6 +87,7 @@ adb shell screencap -p /sdcard/capture.png
 adb pull /sdcard/capture.png chemin_sur_ordinateur
 
 ```
+
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/5924354d-a503-47df-a020-ce5fe9dd4834)
 
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/986cec82-357d-4b5f-b469-cfe753d2dad6)
@@ -105,7 +96,7 @@ adb pull /sdcard/capture.png chemin_sur_ordinateur
 `adb shell input keyevent KEYCODE_BACK`
 `adb shell input keyevent KEYCODE_ENTER`
 `adb shell input keyevent KEYCODE_MENU`
-All keycode: https://developer.android.com/reference/android/view/KeyEvent
+All keycodes: https://developer.android.com/reference/android/view/KeyEvent
 
 Ouvrir la page des paramètres
 `adb shell am start -a android.settings.SETTINGS`
@@ -120,7 +111,7 @@ Capture d'écran;
 `adb shell screencap -p /sdcard/screencap.png && adb pull /sdcard/screencap.png`
 `adb exec-out screencap -p > screen.png`
 
-Start /Stop recording on the device:
+Start / Stop recording on the device:
 `adb shell screenrecord /sdcard/yourfilename.mp4`
 `adb shell pkill -l 15 -f /system/bin/screenrecord`
 `adb pull /sdcard/yourfilename.mp4`
@@ -132,7 +123,7 @@ Ne pas utiliser de cable  ?
 `adb connect adresse_ip_du_telephone:5555`
 
 
-Essayé de deviner ce que fait le script suivant:
+**Essayez de deviner ce que fait le script suivant :**
 
 ``` py
 import subprocess
@@ -179,110 +170,94 @@ input("Appuyez sur Entrée pour fermer la console.")
 _GPT used for those command https://chat.openai.com/share/0d61d5f0-21ed-4efa-a03b-24dc21b8b40b_
 
 
-##### By Side Quest
+# By Side Quest
 
-Il y a des centaines de commandes et l'une dans l'autres, il y a des milliers de combinaison.
-C'est la raison pour laquel il existe des "wrapper"/ des emballagues.
-Des logiciels dont le but n'est pas de créé mais de proposer un interface pour utiliser ADB.
-Comme SideQuest qui permet de facilement utiliser ADB avec les casques VR 
+Il y a des centaines de commandes et, dans l'ensemble, il y a des milliers de combinaisons. C'est la raison pour laquelle il existe des "wrapper" ou des emballages. Des logiciels dont le but n'est pas de créer mais de proposer une interface pour utiliser ADB. Comme SideQuest qui permet de facilement utiliser ADB avec les casques VR.
 
-Download: https://sidequestvr.com/setup-howto
+**Download:** [SideQuest](https://sidequestvr.com/setup-howto)  
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/2da8ccfd-2989-42e2-89eb-92a113e12a0c)
 
+## Le son
 
+- [Spectrogram](https://spectrogram.sciencemusic.org)
+- C'est quoi le son ? [Vidéo](https://youtu.be/24yESm63tSY)
+  [![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/dd320a9c-c51c-459b-9614-e286ffc3921f)](https://youtu.be/24yESm63tSY)
+  ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/a8f2b87b-4508-42bf-80e3-c579c361e44a) [Vidéo](https://youtu.be/24yESm63tSY?t=220)
+  ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/3f5b493f-35e8-4ebc-beab-8cfa0d85bc12) [Vidéo](https://youtu.be/24yESm63tSY?t=360)
+  
+  440 Hz (nombre de fréquences par seconde)
 
-
-
-
-### Le sons
-- https://spectrogram.sciencemusic.org
-- C'est quoi le son ? https://youtu.be/24yESm63tSY
-[![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/dd320a9c-c51c-459b-9614-e286ffc3921f)](https://youtu.be/24yESm63tSY)
-![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/a8f2b87b-4508-42bf-80e3-c579c361e44a)https://youtu.be/24yESm63tSY?t=220 
-![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/3f5b493f-35e8-4ebc-beab-8cfa0d85bc12)https://youtu.be/24yESm63tSY?t=360
-440 Hz (number of frequence per seconds)
-
-What is a spectrogram ?   
+### Qu'est-ce qu'un spectrogramme ?
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/b8f92205-45f5-446e-90b4-564bef17ae4e)  
-https://youtu.be/_FatxGN3vAM
+[Vidéo](https://youtu.be/_FatxGN3vAM)
 
-How to build a spectrogram from sound:
+### Comment construire un spectrogramme à partir du son :
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/5bda3db5-83f0-42bc-812f-beb2602d666b)
-https://youtu.be/Z7YM-HAz-IY?list=PLhA3b2k8R3t2Ng1WW_7MiXeh1pfQJQi_P&t=356
+[Vidéo](https://youtu.be/Z7YM-HAz-IY?list=PLhA3b2k8R3t2Ng1WW_7MiXeh1pfQJQi_P&t=356)
 
-
-### VoiceMeeter
+## VoiceMeeter
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/c3e1d4b2-1aeb-46cf-8f85-acde2b32701b)
-Download: https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/31
+**Download:** [VoiceMeeter](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/31)
 
-### OBS: Hack to redirect audio
+## OBS : Astuce pour rediriger le son
 
-OBS n'a pas d'enregistreur audio. Il est construit pour la video.
-Mais il a beaucoup d'option sur l'audio, dont le fait de rediriger le son pour "monitorer" la qualité du stream.
-C'est que l'on va utiliser avec Voice Meeter pour permettre d'enregistrer le son de nos tests.
-Attention de désactiver le Ducking (décaler le son pour debugger le son du stream)
+OBS n'a pas d'enregistreur audio. Il est construit pour la vidéo. Mais il a beaucoup d'options sur l'audio, dont le fait de rediriger le son pour "monitorer" la qualité du stream. C'est ce que l'on va utiliser avec VoiceMeeter pour permettre d'enregistrer le son de nos tests. Attention de désactiver le Ducking (décaler le son pour débugger le son du stream)  
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/a6fe84fa-b815-4d79-bc8c-c5a0bef0a1ec)
 
-Il faut aussi mettre l'option "Ouput Mode" en avancé et vous pouvez augmenter le bitrate de l'audio:
+Il faut aussi mettre l'option "Output Mode" en avancé et vous pouvez augmenter le bitrate de l'audio :  
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/d40f9b3f-752c-45a6-9efa-e8110c0aaa30)
 
-
-
-
-#### Window Recorder (Sound recorder)
+### Enregistreur de fenêtre (Sound Recorder)
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/d526782e-1681-46be-b2bb-97ab45cff946)
 
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/c63fb874-fdee-4f17-b459-40acdf8e8915)
-Shortcut: 
-- CTRL+ R : Record
-- Escape : Stop Recording
-- Space : Pause Recording
 
-Cette application enregistre les entrées sons.  
-Mais par Voice Meeter, nous avons à notre disposition une entrée son.  
+**Raccourcis :**
+- CTRL+ R : Enregistrer
+- Echap : Arrêter l'enregistrement
+- Espace : Mettre en pause l'enregistrement
+
+Cette application enregistre les entrées sons. Mais par VoiceMeeter, nous avons à notre disposition une entrée son.  
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/adc2fe02-858f-41f0-b93e-1352222e8121)
 
 
-#### Audacity
- [Download](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/9) 
+## Audacity
+[**Download**](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/9)
 
-Audacity est la meilleur application open source que je connais pour editer du son.  
-Elle permet aussi d'en enregistré, mais comme la procédure d'exporter le son n'est pas facile à automatiser avec SendMessage.
-On ne vas pas l'utiliser pour enregistré.    
-Mais vous en aurez besoin pour "trimmer" et retravailler le son au besoin.  
+Audacity est la meilleure application open source que je connaisse pour éditer du son.  
+Elle permet aussi d'enregistrer, mais comme la procédure d'exportation du son n'est pas facile à automatiser avec SendMessage, on ne va pas l'utiliser pour enregistrer.    
+Cependant, vous en aurez besoin pour "trimmer" et retravailler le son au besoin.  
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/cc19a6e7-260e-4441-abbe-c88108dadcde)
 
-Shortcut: 
+**Raccourcis :**
 - Ctrl + Shit + E   500> Enter 500> Enter 500> Enter = Exporter le son
 - Ctrl+ A  500> Enter 500> Enter = Supprimer toute la piste
 
+## NAudio 
 
+NAudio est une bibliothèque qui permet de gérer avec C# les sons sur Windows. 
+Vous voulez enregistrer les sons à partir de votre propre script ? C'est la bibliothèque que vous allez devoir utiliser.
 
+Exemple :
+- Écouter aux volumes d'un jeu : [GitHub Repo](https://github.com/EloiStree/2022_04_29_ListenToMixerForVolume)
+- Vidéo YouTube sur comment coder un enregistreur : [GitHub Issue](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/15)
 
+> Note : Je n'ai pas réussi à le faire en Python à partir de ChatGPT... Car il y a trop de code open source écoutant le micro... (-__-' ) L'IA finit toujours par croire qu'elle nous donne le bon exemple mais se trompe.
 
+---
 
--------------------------------------
+## Note : Enregistrement Xbox
 
-## Note: Record Xbox
-
-Si vous désirez enregistré des playsations et Xbox, vous pouvez acheter des cartes de captures comme la MiraBox qui permet de hacker l'HDMI pour le voir comment entrée vidéo sur votre PC et donc dans OBS.
+Si vous désirez enregistrer des sessions de jeux PlayStation et Xbox, vous pouvez acheter des cartes de capture comme la MiraBox. Cela permet de "hacker" l'HDMI pour voir la sortie vidéo sur votre PC et donc dans OBS.
 [MiraBox](https://www.amazon.com.be/-/en/gp/product/B07G84G7VF/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1)
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/a9feee1a-77c4-46a0-960e-a8f1b0559eca)
 
-
-## Note: AverMedia
+## Note : AverMedia
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/851a3633-0651-4246-baab-194a847c4b40)
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/ccfb3ac5-6789-4c65-a337-167516bcbdf3)
 
+## Note : FFMPEG
 
+Ce code au format exe pour console est un incontournable de l'industrie, mais trop compliqué à expliquer pour ce cours. Je veux du moins en parler.
 
-## Note: FFMPEG
-
-Ce code en format exe pour console est un incontournable de l'industrie mais trop complique à expliquer pour ce cours.
-Je veux du moins en parler.
-
-
-
- 
--------------------------
 
