@@ -68,20 +68,51 @@ Nous allons un peu explorer comment enregistrer votre écran de téléphone et c
 Avant de pouvoir "jouer" avec son téléphone, il faut lui permettre d'être débugger par USB et optionnellement d'installer de source inconnue. Pour ça il faut passer votre téléphone en mode développeur.
 L'idée reste la même mais est différent sur tout les téléphones android:
 https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/30
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/2933e161-1058-4b6f-bd67-8186540faee5)![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/0c94d4d5-495d-43e3-9910-1f7e46271911)
+
 
 
 #### SCRCPY
 Pour pouvoir enregistré ce qui se passe sur votre téléphone Android ou sur votre casque de réalité virtuelle Android.
 Vous allez devoir utiliser SCRCPY qui est un project open source qui permet de communiquer avec les flux vidéos du téléphone.
 
-ADB: Android Debug Bridge est un autre outil qui est dans SCRCPY qui permet de communiquer avec votre téléphone.
-
 [Download](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/4)
-![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/e63d1121-6436-4963-8752-e9671005e07f)
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/d990e5ec-bc00-4252-95cc-5cd36e77d35a)
 
-#### ADB
+#### ADB: Android debug bridge
+
+Android Debug Bridge est un autre outil qui est référencé SCRCPY qui permet de communiquer avec votre téléphone.
+Il permet de communiquer avec votre téléphone.
 
 ##### Command Line
+
+Pour utiliser ADB, vous allez utiliser un interface d'un développeur ou utiliser de command via la console sur window.
+
+```
+adb devices -l
+adb reboot
+adb install MonJeu.apk
+adb uninstall com.entreprise.nomdujeu
+adb shell screencap -p /sdcard/capture.png
+adb pull /sdcard/capture.png chemin_sur_ordinateur
+
+```
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/5924354d-a503-47df-a020-ce5fe9dd4834)
+
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/986cec82-357d-4b5f-b469-cfe753d2dad6)
+
+
+`adb shell input keyevent KEYCODE_BACK`
+`adb shell input keyevent KEYCODE_ENTER`
+`adb shell input keyevent KEYCODE_MENU`
+All keycode: https://developer.android.com/reference/android/view/KeyEvent
+
+Ouvrir la page des paramètres
+`adb shell am start -a android.settings.SETTINGS`
+
+Ouvrir une page web
+`adb shell am start -a android.intent.action.VIEW -d "http://www.example.com"`
+
 
 ##### By Side Quest
 
