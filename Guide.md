@@ -48,7 +48,9 @@ Depuis OBS 28, il y a la possibilité de lancer un Websocket pour controller OBS
 
 Cela permet de prendre le control de ce que l'on veut afficher et de changer à la volé l'outil par le réseaux.
 Info: https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/21
-Par example depuis [Streamer.bot](https://streamer.bot) ou depuis son navigateur web: [http://obs-web.niek.tv](http://obs-web.niek.tv)
+Par example depuis [Streamer.bot](https://streamer.bot) ou depuis son navigateur web: [http://obs-web.niek.tv](http://obs-web.niek.tv)  
+Pour les plus guerriers d'entre vous:  
+https://websocketking.com  
 
 Et comme on a fait du python... Vous devinez pourquoi je vous en parle ;) 
 https://github.com/Elektordi/obs-websocket-py
@@ -59,7 +61,30 @@ Vous pouvez le paramettrer en lancant OBS:
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/57793bff-94c0-491e-9d92-80ec955a7c6f)
 
 
-### SCRCPY: Screen copy
+### SCRCPY: Screen copy ( & ADB )
+Nous allons un peu explorer comment enregistrer votre écran de téléphone et chipoter avec.
+
+#### Mode développeur
+Avant de pouvoir "jouer" avec son téléphone, il faut lui permettre d'être débugger par USB et optionnellement d'installer de source inconnue. Pour ça il faut passer votre téléphone en mode développeur.
+L'idée reste la même mais est différent sur tout les téléphones android:
+https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/30
+
+
+#### SCRCPY
+Pour pouvoir enregistré ce qui se passe sur votre téléphone Android ou sur votre casque de réalité virtuelle Android.
+Vous allez devoir utiliser SCRCPY qui est un project open source qui permet de communiquer avec les flux vidéos du téléphone.
+
+ADB: Android Debug Bridge est un autre outil qui est dans SCRCPY qui permet de communiquer avec votre téléphone.
+
+[Download](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/4)
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/e63d1121-6436-4963-8752-e9671005e07f)
+
+#### ADB
+
+##### Command Line
+
+##### By Side Quest
+
 
 
 
