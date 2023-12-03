@@ -1,6 +1,15 @@
 Bonjour à vous :)
 
 
+# Les bases
+
+## C'est quoi un Spectrogram ?
+
+- https://spectrogram.sciencemusic.org
+Pour un ordit du son c'est ça: `byte[]`  
+Juste une suite de valeur de 0-255 mis l'un derrière l'autrea avec une vitesse de lecture.  
+
+
 # Apprendre
 
 ## 1: Télécharger ADB et prendre une photo de l'écran
@@ -44,6 +53,30 @@ Bonjour à vous :)
 # Bonus 
 
 #c 1 : Utiliser SCRCPY avec votre téléphone comme Webcam
+
+
+
+
+
+
+-----------------
+
+
+Pour l'audio, c'est compliquer quand ça pourrait être simple.
+
+- Install VoiceMeter
+- You need to redirect OBS to debug output and set it on headset or voicemeter
+- Record the output
+  - Use Audacity or else (Reaper...) to record the virtual device of VoiceMeter
+  - Create a code with NAudio that do it.
+ 
+ 
+
+
+
+
+
+
 
 
 
