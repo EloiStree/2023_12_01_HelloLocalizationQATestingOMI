@@ -113,11 +113,81 @@ Ouvrir la page des paramètres
 Ouvrir une page web
 `adb shell am start -a android.intent.action.VIEW -d "http://www.example.com"`
 
+Lancer le playstore
+`adb shell am start -a android.intent.action.VIEW -d "market://details?id=com.android.vending"`
+
+Capture d'écran;
+`adb shell screencap -p /sdcard/screencap.png && adb pull /sdcard/screencap.png`
+`adb exec-out screencap -p > screen.png`
+
+Start /Stop recording on the device:
+`adb shell screenrecord /sdcard/yourfilename.mp4`
+`adb shell pkill -l 15 -f /system/bin/screenrecord`
+`adb pull /sdcard/yourfilename.mp4`
+
+Ne pas utiliser de cable  ?
+
+`adb tcpip 5555`
+`adb shell ip -f inet addr show wlan0`
+`adb connect adresse_ip_du_telephone:5555`
+
+
+Essayé de deviner ce que fait le script suivant:
+
+``` py
+import subprocess
+import time
+
+def run_adb_command(command):
+    try:
+        subprocess.run(command, shell=True, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Erreur lors de l'exécution de la commande ADB : {e}")
+
+# Forcer l'arrêt de toutes les applications en cours
+run_adb_command("adb shell am force-stop com.android.settings")
+run_adb_command("adb shell am force-stop com.android.bluetooth")
+# Ajoutez d'autres commandes am force-stop pour d'autres applications si nécessaire
+
+# Revenir à l'écran d'accueil (home screen)
+run_adb_command("adb shell input keyevent KEYCODE_HOME")
+
+# Attendre un court moment
+time.sleep(1.5)  # Changed from 0.1 to 1.5 seconds
+
+# Ouvrir les paramètres Wi-Fi et prendre une capture d'écran
+run_adb_command("adb shell am start -a android.settings.WIFI_SETTINGS")
+time.sleep(1.5)  # Changed from 0.1 to 1.5 seconds
+run_adb_command("adb shell screencap /sdcard/wifi_settings.png")
+
+# Attendre 10 secondes
+time.sleep(5)
+
+# Ouvrir les paramètres Bluetooth et prendre une capture d'écran
+run_adb_command("adb shell am start -a android.settings.BLUETOOTH_SETTINGS")
+time.sleep(1.5)  # Changed from 0.1 to 1.5 seconds
+run_adb_command("adb shell screencap /sdcard/bluetooth_settings.png")
+
+# Revenir à l'écran d'accueil (home screen)
+run_adb_command("adb shell input keyevent KEYCODE_HOME")
+
+# Laisser la console ouverte
+input("Appuyez sur Entrée pour fermer la console.")
+
+```
+
+_GPT used for those command https://chat.openai.com/share/0d61d5f0-21ed-4efa-a03b-24dc21b8b40b_
+
 
 ##### By Side Quest
 
+Il y a des centaines de commandes et l'une dans l'autres, il y a des milliers de combinaison.
+C'est la raison pour laquel il existe des "wrapper"/ des emballagues.
+Des logiciels dont le but n'est pas de créé mais de proposer un interface pour utiliser ADB.
+Comme SideQuest qui permet de facilement utiliser ADB avec les casques VR 
 
-
+Download: https://sidequestvr.com/setup-howto
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/2da8ccfd-2989-42e2-89eb-92a113e12a0c)
 
 
 
@@ -126,6 +196,16 @@ Ouvrir une page web
 
 ### Le sons
 - https://spectrogram.sciencemusic.org
+- C'est quoi le son ? https://youtu.be/24yESm63tSY
+[![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/dd320a9c-c51c-459b-9614-e286ffc3921f)](https://youtu.be/24yESm63tSY)
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/a8f2b87b-4508-42bf-80e3-c579c361e44a)https://youtu.be/24yESm63tSY?t=220 
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/3f5b493f-35e8-4ebc-beab-8cfa0d85bc12)https://youtu.be/24yESm63tSY?t=360
+440 Hz (number of frequence per seconds)
+
+What is a spectrogram ?   
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/b8f92205-45f5-446e-90b4-564bef17ae4e)  
+https://youtu.be/_FatxGN3vAM
+
 
 ### VoiceMeeter
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/c3e1d4b2-1aeb-46cf-8f85-acde2b32701b)
@@ -185,4 +265,20 @@ Si vous désirez enregistré des playsations et Xbox, vous pouvez acheter des ca
 [MiraBox](https://www.amazon.com.be/-/en/gp/product/B07G84G7VF/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1)
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/a9feee1a-77c4-46a0-960e-a8f1b0559eca)
 
+
+## Note: AverMedia
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/851a3633-0651-4246-baab-194a847c4b40)
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/ccfb3ac5-6789-4c65-a337-167516bcbdf3)
+
+
+
+## Note: FFMPEG
+
+Ce code en format exe pour console est un incontournable de l'industrie mais trop complique à expliquer pour ce cours.
+Je veux du moins en parler.
+
+
+
  
+-------------------------
+
