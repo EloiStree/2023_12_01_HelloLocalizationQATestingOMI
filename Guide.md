@@ -206,10 +206,14 @@ What is a spectrogram ?
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/b8f92205-45f5-446e-90b4-564bef17ae4e)  
 https://youtu.be/_FatxGN3vAM
 
+How to build a spectrogram from sound:
+![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/5bda3db5-83f0-42bc-812f-beb2602d666b)
+https://youtu.be/Z7YM-HAz-IY?list=PLhA3b2k8R3t2Ng1WW_7MiXeh1pfQJQi_P&t=356
+
 
 ### VoiceMeeter
 ![image](https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/assets/20149493/c3e1d4b2-1aeb-46cf-8f85-acde2b32701b)
-
+Download: https://github.com/EloiStree/2023_12_01_HelloLocalizationQATestingOMI/issues/31
 
 ### OBS: Hack to redirect audio
 
