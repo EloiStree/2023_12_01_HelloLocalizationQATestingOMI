@@ -13,7 +13,7 @@ Lors de la Gamescom, j'ai rencontré des entreprises de QA spécialisées dans l
 Après discussion, ce qui leur serait utile à automatiser est le fait de prendre des captures sonores, vidéos et captures d'écran. La particularité est de les sauvegarder dans des dossiers contextuels et selon la langue.
 
 Comme le but de la journée de cours est de:
-- Apprendre à écrire des rapports de test QA,
+- _Apprendre à écrire des rapports de test QA*_,
 - Pratiquer le python et ce que l'on a appris,
 - Tester la réalité virtuelle qui recrute des testeurs,
 - Être utile dans le métier qui suit la formation.
@@ -22,7 +22,7 @@ Je vous ai préparé un atelier qui, en équipe, pratique les quatre points.
 
 Résumé de l'atelier:
 - Poste : Scripter
-  - Utiliser Python pour déclencher un enregistrement vidéo sur OBJ
+  - Utiliser Python pour déclencher un enregistrement vidéo sur OBS
   - Utiliser Python pour déclencher un enregistrement audio sur Audacity*
   - Utiliser Python pour prendre une capture d'écran ou une capture d'image d'une application.
 - Poste : Rapporter
@@ -40,3 +40,21 @@ Find your game:
 - [Quest Game List](https://questgamelist.com/Free/)
 - [App Lab Game List](https://applabgamelist.com/Best)
 - [SideQuest VR](https://sidequestvr.com)
+
+
+
+Le but quand vous allez écrire un ticket est de permettre aux autres participants de l'atelier de le reproduir.
+
+Le lecture du ticket doit svoir avec le text est les photos, vidéo ou sons (si nécessaire) comprendre le but.
+Et si il a besoin, savoir à l'aide de vos instructions le reproduit dans le but de l'ambplifier et de le tester.
+
+Si le bug est marant ou important, appliquer "Piano TV" pour faire un meilleur rapport de bug
+
+
+
+
+
+
+
+
+
