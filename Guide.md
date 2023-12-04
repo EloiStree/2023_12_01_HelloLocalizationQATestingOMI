@@ -170,6 +170,14 @@ input("Appuyez sur Entrée pour fermer la console.")
 _GPT used for those command https://chat.openai.com/share/0d61d5f0-21ed-4efa-a03b-24dc21b8b40b_
 
 
+# La VR ?
+
+Slide: https://docs.google.com/presentation/d/1X9EGTp2brfUrhXHbxRmtjNG-ZmBA3ZfKqmobidP_fgU/edit?usp=sharing
+Headset: https://docs.google.com/presentation/d/12jUnK69IXJHHdJyTyVmaayfdgkEIuzoSXc8ULkvxNHY/edit#slide=id.g3f61c4e2ac_4_436
+What is VR 
+- https://www.youtube.com/watch?v=wRCS2-AAyNM
+- https://www.youtube.com/watch?v=8rVnkWbLnk8
+
 # By Side Quest
 
 Il y a des centaines de commandes et, dans l'ensemble, il y a des milliers de combinaisons. C'est la raison pour laquelle il existe des "wrapper" ou des emballages. Des logiciels dont le but n'est pas de créer mais de proposer une interface pour utiliser ADB. Comme SideQuest qui permet de facilement utiliser ADB avec les casques VR.
